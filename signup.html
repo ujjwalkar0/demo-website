@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://media.glassdoor.com/sqll/766937/clinisys-group-squareLogo-1672228204149.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link href="./style.css" rel="stylesheet">
+    <title>Clinisys Medwiki</title>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="navbar"></div>
+    <div class="signupComponent">
+        <center>
+            <form class="signupForm" method="get">
+                <h3>Sign Up</h3>
+                <input type="text" name="firstname" id="firstname" class="signupInput" placeholder="First Name" oninput="name_validation(this)">
+                <input type="text" name="lastname" id="lastname" class="signupInput" placeholder="Last Name" oninput="name_validation(this)">
+
+                <select id="countryCode">
+                    <option value="" hidden>Select country code...</option>
+                </select>
+                <input type="number" name="mobileNo" id="mobileNo" placeholder="Mobile Number"
+                    oninput="phone_validation(this)">
+
+                <input type="email" name="emailId" id="emailId" class="signupInput" placeholder="Email Id"
+                    oninput="email_validation(this)">
+
+                <input type="password" name="password" id="password" class="signupInput" placeholder="Password" oninput="strong_password(this)">
+                <input type="password" name="confirm_password" id="confirm_password" class="signupInput"
+                    placeholder="Confirm Password" oninput="password_validation(this)">
+                <center>
+                    <p id="error"></p>
+                    <button type="submit" class="signupButton" onclick="Signup()">Signup</button>
+                    <button type="submit" class="signupWithMicrosoftButton">Signup with Microsoft</button>
+                </center>
+            </form>
+        </center>
+    </div>
+</body>
+<script src="./signup.js"></script>
+<script type="module" src="./index.js"></script>
+<script src="./countryCode.js"></script>
+
+<!-- <script type="module" src="./countryCode.js"></script> -->
+
+</html>

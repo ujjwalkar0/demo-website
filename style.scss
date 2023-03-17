@@ -1,0 +1,501 @@
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/horizontal-banner-format-medicines-thermometer-pills-top-view-yellow-background-free-space-test-disease-treatment-209385272.jpg");
+    margin: 0px;
+}
+
+// Variables
+
+$background-color: #ffd105;
+
+$navbar-font-color: rgb(8, 8, 8);
+$navbar-font-color-hover: #534a4a;
+
+
+// Navigation Bar
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $background-color;
+}
+
+li.navbar {
+    float: left;
+}
+
+li.navbar a {
+    display: block;
+    color: $navbar-font-color;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: cursive;
+
+    &:hover {
+        text-decoration: underline;
+        color: $navbar-font-color-hover;
+    }
+}
+
+ul.navbar div img.logo {
+    margin: 8px;
+}
+
+
+div.right {
+    float: right;
+}
+
+div.left {
+    float: left;
+}
+
+
+p.bannerText {
+    font-size: 80px;
+    border: 15px;
+    text-align: center;
+    font-family: Lucida Handwriting;
+}
+
+input.search,
+input.search:focus {
+    width: 96%;
+    height: 35px;
+    outline: hidden;
+}
+
+button.searchItem {
+    margin-left: 43%;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: green;
+    color: #fff;
+    border: 0px;
+    height: 30px;
+}
+
+button.searchItem:hover {
+    margin-left: 43%;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: rgb(36, 175, 36);
+    color: #fff;
+    border: 0px;
+    height: 30px;
+}
+
+// Common Mixin's
+
+@mixin Form($width) {
+    border: rgb(59, 53, 53) solid 1px;
+    width: $width; //40%;
+    display: block;
+    margin-top: 5%;
+    background-color: #fde68a;
+}
+
+@mixin Input($width) {
+    width: $width;
+    padding: 10px;
+    margin: 8px;
+}
+
+@mixin Button($buttonBg, $buttonHoverBg) {
+    display: inline;
+    background-color: $buttonBg;
+    border: 0px;
+    color: beige;
+    font-size: 17px;
+    margin: 5px;
+    border-radius: 5px;
+    width: 50%;
+    padding: 8px;
+
+    &:hover {
+        background-color: $buttonHoverBg;
+    }
+}
+
+// Common
+
+.invalidInput{
+    background-color: rgb(255, 133, 133);
+    outline: none;
+    
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+//  Styles for Login Form
+
+.loginForm {
+    @include Form(40%);
+}
+
+.loginInput {
+    @include Input(70%);
+}
+
+.loginButton {
+    @include Button(rgb(202, 107, 39), rgb(182, 110, 59));
+}
+
+.loginWithGoogle {
+    @include Button(rgb(202, 107, 39), rgb(182, 110, 59));
+}
+
+.loginWithMicrosoftButton {
+    @include Button(rgb(105, 170, 0), rgb(3, 145, 97));
+}
+
+// Styles for Signup Form
+
+#countryCode {
+    @include Input(12%);
+    margin: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#mobileNo {
+    @include Input(28%);
+    margin: 0px;
+}
+
+.signupForm {
+    @include Form(40%);
+}
+
+.signupInput {
+    @include Input(40%);
+}
+
+
+
+.signupButton {
+    @include Button(rgb(202, 107, 39), rgb(182, 110, 59));
+}
+
+.signupWithMicrosoftButton {
+    @include Button(rgb(105, 170, 0), rgb(3, 145, 97));
+}
+
+.medicinesList {
+    background-color: white;
+    height: 75%;
+    width: 38%;
+    display: block;
+    position: fixed;
+    padding-left: 30px;
+    margin: 50px;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+// Mobile View
+@media only screen and (max-width: 908px) {
+    .loginForm {
+        @include Form(60%);
+    }
+
+    .signupForm {
+        @include Form(60%);
+    }
+}
+
+// body {
+//     background-image: url("https://thumbs.dreamstime.com/b/horizontal-banner-format-medicines-thermometer-pills-top-view-yellow-background-free-space-test-disease-treatment-209385272.jpg");
+//     margin: 0px;
+// }
+
+// ul.navbar {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+//     background-color: #ffd105;
+// }
+
+// li.navbar {
+//     float: left;
+// }
+
+// li.navbar a {
+//     display: block;
+//     color: #080808;
+//     padding: 14px 16px;
+//     text-decoration: none;
+//     font-size: 19px;
+//     font-family: cursive;
+// }
+
+// li.navbar a:hover {
+//     text-decoration: underline;
+//     color: #534a4a;
+// }
+
+// ul.navbar div img.logo {
+//     margin: 8px;
+// }
+
+// div.right {
+//     float: right;
+// }
+
+// div.left {
+//     float: left;
+// }
+
+// p.bannerText {
+//     font-size: 80px;
+//     border: 15px;
+//     text-align: center;
+//     font-family: Lucida Handwriting;
+// }
+
+// input.search,
+// input.search:focus {
+//     width: 96%;
+//     height: 35px;
+//     outline: hidden;
+// }
+
+// button.searchItem {
+//     margin-left: 43%;
+//     margin-top: 20px;
+//     font-size: 20px;
+//     background-color: green;
+//     color: #fff;
+//     border: 0px;
+//     height: 30px;
+// }
+
+// button.searchItem:hover {
+//     margin-left: 43%;
+//     margin-top: 20px;
+//     font-size: 20px;
+//     background-color: #24af24;
+//     color: #fff;
+//     border: 0px;
+//     height: 30px;
+// }
+
+// .loginForm {
+//     border: #3b3535 solid 1px;
+//     width: 40%;
+//     display: block;
+//     margin-top: 5%;
+//     background-color: #fde68a;
+// }
+
+// .loginInput {
+//     width: 70%;
+//     padding: 10px;
+//     margin: 8px;
+// }
+
+// .loginButton {
+//     display: inline;
+//     background-color: #ca6b27;
+//     border: 0px;
+//     color: beige;
+//     font-size: 17px;
+//     margin: 5px;
+//     border-radius: 5px;
+//     width: 50%;
+//     padding: 8px;
+// }
+
+// .loginButton:hover {
+//     background-color: #b66e3b;
+// }
+
+// .loginWithGoogle {
+//     display: inline;
+//     background-color: #ca6b27;
+//     border: 0px;
+//     color: beige;
+//     font-size: 17px;
+//     margin: 5px;
+//     border-radius: 5px;
+//     width: 50%;
+//     padding: 8px;
+// }
+
+// .loginWithGoogle:hover {
+//     background-color: #b66e3b;
+// }
+
+// .loginWithMicrosoftButton {
+//     display: inline;
+//     background-color: #69aa00;
+//     border: 0px;
+//     color: beige;
+//     font-size: 17px;
+//     margin: 5px;
+//     border-radius: 5px;
+//     width: 50%;
+//     padding: 8px;
+// }
+
+// .loginWithMicrosoftButton:hover {
+//     background-color: #039161;
+// }
+
+// .signupForm {
+//     border: #3b3535 solid 1px;
+//     width: 40%;
+//     display: block;
+//     margin-top: 5%;
+//     background-color: #fde68a;
+// }
+
+// .signupInput {
+//     width: 28%;
+//     padding: 10px;
+//     margin: 8px;
+//     outline: none;
+// }
+
+// /* #countryCode{
+//     width: 12%;
+//     padding: 9px 0px;
+//     margin: 0px;
+//     outline: none;
+// } */
+
+// /* #mobileNo{
+//     width: 31%;
+//     padding: 9px 0px;
+//     margin: 2px;
+//     outline: none;
+// } */
+
+// .invalidInput{
+//     background-color: rgb(250, 116, 116);
+// }
+
+// .signupButton {
+//     display: inline;
+//     background-color: #ca6b27;
+//     border: 0px;
+//     color: beige;
+//     font-size: 17px;
+//     margin: 5px;
+//     border-radius: 5px;
+//     width: 50%;
+//     padding: 8px;
+// }
+
+// .signupButton:hover {
+//     background-color: #b66e3b;
+// }
+
+// .signupWithMicrosoftButton {
+//     display: inline;
+//     background-color: #69aa00;
+//     border: 0px;
+//     color: beige;
+//     font-size: 17px;
+//     margin: 5px;
+//     border-radius: 5px;
+//     width: 50%;
+//     padding: 8px;
+// }
+
+// .signupWithMicrosoftButton:hover {
+//     background-color: #039161;
+// }
+
+// .medicinesList {
+//     background-color: white;
+//     height: 75%;
+//     width: 38%;
+//     display: block;
+//     position: fixed;
+//     padding-left: 30px;
+//     margin: 50px;
+//     overflow-y: scroll;
+// }
+
+// /* width */
+// ::-webkit-scrollbar {
+//     width: 5px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: #888;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #555;
+// }
+
+// @media only screen and (max-width: 750px) {
+//     .loginForm {
+//         border: #3b3535 solid 1px;
+//         width: 60%;
+//         display: block;
+//         margin-top: 5%;
+//         background-color: #fde68a;
+//     }
+
+//     .signupForm {
+//         border: #3b3535 solid 1px;
+//         width: 60%;
+//         display: block;
+//         margin-top: 5%;
+//         background-color: #fde68a;
+//     }
+// }
+
+// /* Chrome, Safari, Edge, Opera */
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// /* Firefox */
+// input[type=number] {
+//   -moz-appearance: textfield;
+// }
